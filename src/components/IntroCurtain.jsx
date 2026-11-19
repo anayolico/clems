@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const FLOATING_PARTICLES = [
@@ -57,8 +57,10 @@ const BACKGROUND_SLIDES = [
 
 export default function IntroCurtain({ onEnter }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const hasMountedRef = useRef(false);
 
   useEffect(() => {
+    hasMountedRef.current = true;
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % BACKGROUND_SLIDES.length);
     }, 4000);
@@ -80,14 +82,14 @@ export default function IntroCurtain({ onEnter }) {
     >
       {/* Continuous Moving & Crossfading Full-Screen Estate Backdrop */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <AnimatePresence initial={false}>
+        <AnimatePresence>
           <motion.img
             key={currentSlide.src}
             src={currentSlide.src}
             alt={currentSlide.alt}
             className="absolute inset-0 w-full h-full object-cover will-change-transform"
             initial={{
-              opacity: 0,
+              opacity: hasMountedRef.current ? 0 : 1,
               scale: currentSlide.fromScale,
               x: currentSlide.fromX,
               y: currentSlide.fromY,
