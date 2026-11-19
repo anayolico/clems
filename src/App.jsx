@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import bgMusic from "./assets/Flavour_-_Big_Moves_Only(128k).m4a";
 import IntroCurtain from "./components/IntroCurtain";
 import HeroSection from "./components/HeroSection";
 import WelcomeSection from "./components/WelcomeSection";
@@ -63,7 +64,7 @@ export default function App() {
     <>
       <audio
         ref={audioRef}
-        src="/audio/background-music.wav"
+        src={bgMusic}
         loop
         autoPlay
         playsInline
