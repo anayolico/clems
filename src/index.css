@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+@theme {
+  --color-inverse-primary: #755a26;
+  --color-on-primary: #412d00;
+  --color-on-background: #e1e2ec;
+  --color-surface-bright: #363941;
+  --color-surface-container-low: #191b23;
+  --color-on-error: #690005;
+  --color-on-secondary: #402d00;
+  --color-on-surface: #e1e2ec;
+  --color-on-primary-fixed-variant: #5b4310;
+  --color-on-tertiary-fixed-variant: #544433;
+  --color-tertiary-fixed: #f6dec7;
+  --color-tertiary-fixed-dim: #d9c3ac;
+  --color-primary-fixed: #ffdea6;
+  --color-on-primary-container: #5d4513;
+  --color-error: #ffb4ab;
+  --color-on-error-container: #ffdad6;
+  --color-on-tertiary: #3c2e1e;
+  --color-secondary-fixed-dim: #e3c285;
+  --color-outline-variant: #4d463a;
+  --color-inverse-on-surface: #2d3038;
+  --color-primary-container: #d6b477;
+  --color-on-tertiary-fixed: #25190b;
+  --color-on-tertiary-container: #564635;
+  --color-on-secondary-container: #d4b478;
+  --color-primary: #f3cf90;
+  --color-secondary-container: #5c4614;
+  --color-surface-tint: #e5c283;
+  --color-surface-container: #1d1f27;
+  --color-outline: #998f81;
+  --color-tertiary: #e8d0b9;
+  --color-surface-container-highest: #32353d;
+  --color-primary-fixed-dim: #e5c283;
+  --color-on-secondary-fixed-variant: #594312;
+  --color-surface-container-high: #272a32;
+  --color-inverse-surface: #e1e2ec;
+  --color-on-surface-variant: #d0c5b5;
+  --color-surface-container-lowest: #0b0e15;
+  --color-surface: #10131a;
+  --color-secondary-fixed: #ffdea3;
+  --color-on-secondary-fixed: #261900;
+  --color-background: #10131a;
+  --color-on-primary-fixed: #271900;
+  --color-secondary: #e3c285;
+  --color-surface-dim: #10131a;
+  --color-surface-variant: #32353d;
+  --color-tertiary-container: #cbb59f;
+  --color-error-container: #93000a;
+
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  --spacing-gutter: 1.5rem;
+  --spacing-space-lg: 1.75rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-margin: 3rem;
+  --spacing-space-md: 1rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-space-xl: 3rem;
+  --spacing-space-xs: 0.25rem;
+
+  --font-display-hero-mobile: "Playfair Display", serif;
+  --font-title-editorial: "Playfair Display", serif;
+  --font-body-sm: "Plus Jakarta Sans", sans-serif;
+  --font-display-hero: "Playfair Display", serif;
+  --font-headline-lg: "Playfair Display", serif;
+  --font-headline-sm: "Playfair Display", serif;
+  --font-body-md: "Plus Jakarta Sans", sans-serif;
+  --font-headline-md: "Playfair Display", serif;
+  --font-label-caps: "Plus Jakarta Sans", sans-serif;
+  --font-body-lg: "Plus Jakarta Sans", sans-serif;
+  --font-headline-lg-mobile: "Playfair Display", serif;
+  --font-caption: "Plus Jakarta Sans", sans-serif;
+
+  --text-display-hero-mobile: 36px;
+  --text-display-hero-mobile--line-height: 44px;
+  --text-display-hero-mobile--letter-spacing: -0.01em;
+  --text-display-hero-mobile--font-weight: 600;
+
+  --text-title-editorial: 18px;
+  --text-title-editorial--line-height: 26px;
+  --text-title-editorial--letter-spacing: 0.02em;
+  --text-title-editorial--font-weight: 400;
+
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--letter-spacing: 0.02em;
+  --text-body-sm--font-weight: 400;
+
+  --text-display-hero: 56px;
+  --text-display-hero--line-height: 68px;
+  --text-display-hero--letter-spacing: -0.02em;
+  --text-display-hero--font-weight: 600;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 50px;
+  --text-headline-lg--letter-spacing: -0.015em;
+  --text-headline-lg--font-weight: 500;
+
+  --text-headline-sm: 22px;
+  --text-headline-sm--line-height: 30px;
+  --text-headline-sm--letter-spacing: 0.01em;
+  --text-headline-sm--font-weight: 400;
+
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--letter-spacing: 0.01em;
+  --text-body-md--font-weight: 400;
+
+  --text-headline-md: 28px;
+  --text-headline-md--line-height: 36px;
+  --text-headline-md--letter-spacing: 0em;
+  --text-headline-md--font-weight: 400;
+
+  --text-label-caps: 11px;
+  --text-label-caps--line-height: 16px;
+  --text-label-caps--letter-spacing: 0.18em;
+  --text-label-caps--font-weight: 600;
+
+  --text-body-lg: 17px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--letter-spacing: 0.01em;
+  --text-body-lg--font-weight: 300;
+
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--font-weight: 500;
+
+  --text-caption: 12px;
+  --text-caption--line-height: 18px;
+  --text-caption--letter-spacing: 0.03em;
+  --text-caption--font-weight: 300;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    touch-action: pan-y;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-ltr {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-rtl {
+  display: flex;
+  width: max-content;
+  animation: marquee-rtl var(--marquee-duration, 90s) linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-ltr {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr var(--marquee-duration, 90s) linear infinite;
+  will-change: transform;
+}
+
+.marquee-wrapper:hover .animate-marquee-rtl,
+.marquee-wrapper:hover .animate-marquee-ltr {
+  animation-play-state: paused;
+}
